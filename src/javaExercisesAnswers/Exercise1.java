@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class Exercise1 {
 
 	public static void main(String[] args) {
+		double std;
+		double average;
+		double var = 0;
+		double variance=0;
 		Scanner scnr = new Scanner(System.in);
 		//
 		
@@ -26,16 +30,23 @@ public class Exercise1 {
 		}
 		System.out.println("Array sum "+arraySum);
 
-		double average= arraySum/Array.length;
+		 average= arraySum/Array.length;
 		System.out.println("average of 10 numbers: "+average);
 		
-		double var = 0;
+		
 		for(int i=0; i<arrayLength; i++)
 		{
-			var= Array[i]-average;
+			var = Math.pow(Array[i]-average, 2);
+			
+			
+			variance= var+variance;
+			
 		}
-		System.out.println("variance is: "+var);
-		double std;
+		System.out.println("variance is: "+variance);
+		
+		
+		std = Math.sqrt(variance)/Array.length;
+		System.out.println("Standard deviation of 10 numbers in the array list is "+std);
 	}
 
 }

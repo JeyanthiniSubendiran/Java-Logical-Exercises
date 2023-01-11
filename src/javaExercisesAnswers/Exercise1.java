@@ -6,15 +6,15 @@ public class Exercise1 {
 
 	public static void main(String[] args) {
 		double std;
-		double average;
-		double var = 0;
+		float average;
+		double var = 0; 
 		double variance=0;
 		Scanner scnr = new Scanner(System.in);
 		//
 		
 		int arrayLength =10;
 		int[] Array = new int[arrayLength];
-		System.out.print("Enter numbers: ");
+		System.out.print("Enter array elements: ");
 		for(int i=0; i<arrayLength; i++)
 		{
 			Array[i]=scnr.nextInt();

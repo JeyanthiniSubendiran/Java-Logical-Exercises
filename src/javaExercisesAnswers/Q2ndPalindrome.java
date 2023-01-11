@@ -8,39 +8,27 @@ public class Q2ndPalindrome {
 		
 		Scanner scnr = new Scanner(System.in);
 		
-		System.out.println("length of array: ");
-		int len = scnr.nextInt();
+		System.out.println("Enter the word: ");
+		String word = scnr.next();
+		int len = word.length();
 		
-		char[] cArray = new char[len];
-		for(int i=0;i<len;i++)
-		{
-			cArray[i]= scnr.next().charAt(0);
-		}
-		//System.out.println(len);
-		char[] bArray = new char[len];
-		for(int i=len-1; i>=0;i--)
-		{
+		String reverse="";
 		
-			System.out.print(cArray[i]+" ");
+		for(int i=len-1; i>=0; i--)
+		{
+			reverse = reverse+word.charAt(i);
+			//System.out.print(word.charAt(i)+" ");
 		}
+		System.out.print("The reverse string is: "+reverse);
 		System.out.println();
-		for(int i=0; i<len; i++)
+		if(reverse.equals(word))
 		{
-			bArray[i]=cArray[(len-1)-i];
-			System.out.print(bArray[i]+" ");
-			//len =len-1;
-		}
-		for(int i=0; i<len;i++) {
-			//System.out.println("Array B: ");
-		
-		if(cArray[i]==bArray[i])
-		{
-		System.out.println("palindrome");
+			System.out.println("You entered a palindrome string");
 		}
 		else
+			System.out.println("the string is not palindrome");
 		
-			System.out.println("not palindrome");
-		}
+		
 	}
 	}
 
